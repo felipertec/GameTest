@@ -44,11 +44,28 @@ function component(width, height, color, x, y, speedX, speedY){
 function updateGameArea(){
   myGameArea.clear(); // Irá ficar limpando a game Area.
   yellowGamePiece.newPos(); // Chamando a função de mover para o quadrado amarelo.
-  redGamePiece.update(); // Ficará atualizando o desenho do quadrado
+  redGamePiece.update();
   blueGamePiece.update();
-  yellowGamePiece.update();
+  yellowGamePiece.update(); // Ficará atualizando o desenho do quadrado
 }
 
-function moveup(){
+function moveUp(){
     yellowGamePiece.speedY -= 1;
+}
+
+function moveLeft(){
+    yellowGamePiece.speedX -= 1;
+}
+
+function moveDown(){
+    yellowGamePiece.speedY += 1;
+}
+
+function moveRight(){
+    yellowGamePiece.speedX += 1;
+}
+
+function stopMove(){
+    yellowGamePiece.speedX = 0;
+    yellowGamePiece.speedY = 0;
 }
